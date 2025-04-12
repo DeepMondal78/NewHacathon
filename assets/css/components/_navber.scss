@@ -1,0 +1,32 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0 ;
+    // background: red;
+    padding: 1rem 4rem;
+    z-index: 999;
+    transition: top 0.4s ease;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            a {
+                position: relative;
+                font-weight: 600;
+            }
+            
+            @import './button';
+        }
+    }
+}
+
+.hide {
+    top: -100px;
+}

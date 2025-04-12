@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: SF Pro Display;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: #111;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+@import './components/variables';
+
+@import './components/navber';
+@import './components/section';
+@import './components/home';
