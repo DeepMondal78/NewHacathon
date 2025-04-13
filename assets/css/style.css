@@ -8,8 +8,6 @@
 html,
 body {
   width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   background: #111;
   color: white;
@@ -114,6 +112,22 @@ main section {
   justify-content: space-between;
   gap: 1rem;
 }
+#hero .animPara {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+#hero .animPara .word {
+  display: inline-block;
+  font-size: 2rem;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+#hero .animPara .word span {
+  display: inline-block;
+  font-size: 2rem;
+  transform: translateY(100%);
+  opacity: 0;
+}
 #hero .content {
   width: 50%;
   height: 100%;
@@ -187,6 +201,7 @@ main section {
      object-fit: cover;
   aspect-ratio: 1/1;
   z-index: 9;
+  animation: moveUp 1.5s ease-out infinite;
 }
 #hero .images .background {
   position: absolute;
@@ -223,6 +238,7 @@ main section {
 
 #des {
   width: 80%;
+  height: 70vh;
   height: -moz-fit-content;
   height: fit-content;
   margin: 1rem auto;
@@ -241,9 +257,16 @@ main section {
   -webkit-backdrop-filter: blur(18.6px);
   border: 1px solid rgba(17, 17, 17, 0.02);
 }
+#des .des-container .elem-text {
+  color: #4e4d4d;
+}
+#des .des-container .elem-text span {
+  color: #4e4d4d;
+  transition: color 0.3s ease;
+}
 #des .des-container h2,
 #des .des-container h3 {
-  width: 30%;
+  width: 40%;
 }
 #des .des-container h3 {
   border-left: 0.2rem solid white;
@@ -521,6 +544,8 @@ main section {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid rgba(255, 255, 255, 0.505);
+  cursor: pointer;
+  position: relative;
 }
 #feature-review .features .feature-card h3 {
   width: 40px;
@@ -529,6 +554,17 @@ main section {
   align-content: center;
   border: 3px solid rgba(255, 255, 255, 0.29);
   border-radius: 50%;
+}
+#feature-review .features .feature-card img {
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+  z-index: 99;
 }
 
 #tech {
@@ -633,7 +669,8 @@ main section {
 #marquee .lower-marquee .marquee-item {
   animation-name: marquee2;
 }
-#marquee .marquee::before, #marquee .marquee::after {
+#marquee .marquee::before,
+#marquee .marquee::after {
   position: absolute;
   content: "";
   width: 15%;
@@ -665,6 +702,92 @@ main section {
   100% {
     transform: translateX(0);
   }
+}
+
+.testimonial-container {
+  width: 100%;
+  max-width: 56rem;
+  padding: 2rem;
+  margin: auto;
+}
+.testimonial-container .testimonial-grid {
+  display: grid;
+  gap: 5rem;
+}
+@media (min-width: 768px) {
+  .testimonial-container .testimonial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.testimonial-container .image-container {
+  position: relative;
+  width: 100%;
+  height: 24rem;
+  perspective: 1000px;
+}
+.testimonial-container .image-container .testimonial-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.testimonial-container .testimonial-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+.testimonial-container .testimonial-content .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+.testimonial-container .testimonial-content .designation {
+  font-size: 0.875rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.testimonial-container .testimonial-content .quote {
+  font-size: 1.125rem;
+  color: #fff;
+  line-height: 1.75;
+}
+.testimonial-container .testimonial-content .arrow-buttons {
+  display: flex;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+@media (min-width: 768px) {
+  .testimonial-container .testimonial-content .arrow-buttons {
+    padding-top: 0;
+  }
+}
+.testimonial-container .testimonial-content .arrow-buttons .arrow-button {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background-color: #2e2e2e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+.testimonial-container .testimonial-content .arrow-buttons .arrow-button:hover {
+  background-color: #00a6fb;
+}
+.testimonial-container .testimonial-content .arrow-buttons .arrow-button i {
+  font-size: 1.5rem;
+  transition: fill 0.3s;
+}
+.testimonial-container .testimonial-content .arrow-buttons .arrow-button i:hover {
+  fill: #ffffff;
 }
 
 #connect {

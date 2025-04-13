@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechZone</title>
+    <!-- locomotive css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- remix icon cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- ========= CUSTOM CSS ========= -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- ========= FONT AWESOME CDN ========= -->
@@ -12,6 +16,8 @@
 </head>
 
 <body>
+
+
     <!-- ========= NAVBAR ========= -->
     <header class="navbar">
         <nav>
@@ -27,17 +33,18 @@
     </header>
     <main>
         <!-- ========= HERO SECTION ========= -->
-        <section id="hero">
+        <section id="hero" data-scroll data-scroll-speed="2">
             <article class="content">
-                <h1>
-                    Rebuilding TechZone Pookie07 Watch
+                <div class="hero-title hero-anime">
+                    <h1>Rebuilding TechZone Pookie07 Watch</h1>
                     <div class="title-img"></div>
-                </h1>
-                <p>
+                </div>
+
+                <p class="hero-anime">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Necessitatibus, eius.
                 </p>
-                <div class="btn-container">
+                <div class="btn-container hero-anime">
                     <button>Order Now</button>
                     <button>Explore Features</button>
                 </div>
@@ -48,11 +55,11 @@
             </aside>
         </section>
         <!-- ========= DESCRIPTION SECTION ========= -->
-        <section id="des">
-            <div class="des-container">
-                <h2>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                    odit.
+        <section id="des" data-scroll data-scroll-speed="3">
+            <div class="des-container ">
+                <h2 class="elem-text">
+                    Discover the future of technology with our latest product lineup — built for performance, style, and
+                    smart living.
                 </h2>
                 <div class="center">
                     <div class="users">
@@ -62,9 +69,10 @@
                     <h1>50K+</h1>
                     <p>User Love</p>
                 </div>
-                <h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                    quidem, aliquam molestias doloribus in quas?
+                <h3 class="elem-text">
+                    From ultra-fast laptops to powerful smartphones, sleek smartwatches to immersive earbuds —
+                    experience innovation that fits your lifestyle.
+                </h3>
                 </h3>
             </div>
             <div class="watch-preview">
@@ -140,7 +148,8 @@
             </div>
             <div class="experience-container">
                 <div class="title">
-                    <h4>EXPERIENCES <div></div></h4>
+                    <h4>EXPERIENCES <div></div>
+                    </h4>
                     <h1>Your Constant <span>Companion</span></h1>
                 </div>
                 <div class="experiences">
@@ -148,21 +157,27 @@
                         <img src="./assets/images/feactures-2.png" alt="">
                         <div class="content">
                             <h3>Always Stay Connected.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aut suscipit, repellendus recusandae quisquam, consectetur neque perspiciatis officia magnam velit rerum dolorem quibusdam numquam expedita?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aut suscipit,
+                                repellendus recusandae quisquam, consectetur neque perspiciatis officia magnam velit
+                                rerum dolorem quibusdam numquam expedita?</p>
                         </div>
                     </div>
                     <div class="experience-card">
                         <img src="./assets/images/feactures-2.png" alt="">
                         <div class="content">
                             <h3>Always Stay Connected.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aut suscipit, repellendus recusandae quisquam, consectetur neque perspiciatis officia magnam velit rerum dolorem quibusdam numquam expedita?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aut suscipit,
+                                repellendus recusandae quisquam, consectetur neque perspiciatis officia magnam velit
+                                rerum dolorem quibusdam numquam expedita?</p>
                         </div>
                     </div>
                     <div class="experience-card">
                         <img src="./assets/images/feactures-2.png" alt="">
                         <div class="content">
                             <h3>Always Stay Connected.</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aut suscipit, repellendus recusandae quisquam, consectetur neque perspiciatis officia magnam velit rerum dolorem quibusdam numquam expedita?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum aut suscipit,
+                                repellendus recusandae quisquam, consectetur neque perspiciatis officia magnam velit
+                                rerum dolorem quibusdam numquam expedita?</p>
                         </div>
                     </div>
                 </div>
@@ -172,7 +187,8 @@
         <section id="ad">
             <div class="ad-container">
                 <div class="title">
-                    <h4>THE BEAST <div></div></h4>
+                    <h4>THE BEAST <div></div>
+                    </h4>
                     <h1>The Beauty With Brain <span>Product</span></h1>
                 </div>
                 <div class="video-container">
@@ -190,26 +206,32 @@
                     <div class="feature-card">
                         <h3>1</h3>
                         <h2>Smart Fitness Tracking</h2>
+                        <img src="./assets/images/1.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
                         <h3>1</h3>
-                        <h2>Smart Fitness Tracking</h2>
+                        <h2>AI-Powered Health Insights</h2>
+                        <img src="./assets/images/2.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
                         <h3>1</h3>
-                        <h2>Smart Fitness Tracking</h2>
+                        <h2>Real-Time Body Monitoring</h2>
+                        <img src="./assets/images/wristwatch.webp" alt="">
+
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
                         <h3>1</h3>
-                        <h2>Smart Fitness Tracking</h2>
+                        <h2>Personalized Workout Plans</h2>
+                        <img src="./assets/images/male-watch.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
                         <h3>1</h3>
-                        <h2>Smart Fitness Tracking</h2>
+                        <h2>Track. Train. Transform</h2>
+                        <img src="./assets/images/male-watch-2.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                 </div>
@@ -228,12 +250,12 @@
                             <h3>Heart Rate Sensor</h3>
                             <h3>98%</h3>
                         </div>
-                        
+
                         <div class="label">
                             <h3>Heart Rate Sensor</h3>
                             <h3>98%</h3>
                         </div>
-                        
+
                         <div class="label">
                             <h3>Heart Rate Sensor</h3>
                             <h3>98%</h3>
@@ -259,21 +281,52 @@
             <div class="lower-marquee marquee">
                 <ul class="marquee-item">
                     <li>Elegance</li>
-                    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, molestias!</p></li>
+                    <li>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, molestias!</p>
+                    </li>
                     <li><img src="./assets/images/apple.webp" alt=""></li>
                 </ul>
                 <ul class="marquee-item">
                     <li>Elegance</li>
-                    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, molestias!</p></li>
+                    <li>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, molestias!</p>
+                    </li>
                     <li><img src="./assets/images/apple.webp" alt=""></li>
                 </ul>
             </div>
         </section>
+        <!-- testimonial section -->
+        <section class="testimonial-section">
+            <div class="testimonial-container">
+                <div class="testimonial-grid">
+                    <div class="image-container" id="image-container"></div>
+                    <div class="testimonial-content">
+                        <div>
+                            <h3 class="name" id="name"></h3>
+                            <p class="designation" id="designation"></p>
+                            <p class="quote" id="quote"></p>
+                        </div>
+                        <div class="arrow-buttons">
+                            <button class="arrow-button" id="prev-button">
+                                <i class="ri-arrow-left-s-fill"></i>
+                            </button>
+                            <button class="arrow-button" id="next-button">
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
         <!-- ========= CONNECT SECTION ========= -->
         <section id="connect">
             <div class="connect-container">
                 <div class="title">
-                    <h4>Subscribe <div></div></h4>
+                    <h4>Subscribe <div></div>
+                    </h4>
                     <h1>Stay in the Loop: Subscribe For Exclusive <span>Updates</span>!</h1>
                 </div>
                 <div class="contact">
@@ -287,9 +340,18 @@
 
     </main>
 
+    <!-- ========= LOCOMOTIVE CDN  ========= -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- ========= GSAP CDN  ========= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ========= SCROLL TRIGGER CDN  ========= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"
+        integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- ========= CUSTOM JS ========= -->
     <script src="/assets/js/home.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/locomotive.js"></script>
 </body>
 
 </html>
