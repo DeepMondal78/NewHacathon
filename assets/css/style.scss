@@ -8,8 +8,6 @@
 html,
 body {
     width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
     scroll-behavior: smooth;
     background: #111;
     color: white;
@@ -26,7 +24,13 @@ a {
 }
 
 @import './components/variables';
-
+@import './components/base';
+@import './components/flexbox';
+@import './components/backdropfilter';
 @import './components/navber';
 @import './components/section';
 @import './components/home';
+@import './components/collection';
+@import './components/earbuds-section';
+// @import './components/'
+@import './components/laptopsection'

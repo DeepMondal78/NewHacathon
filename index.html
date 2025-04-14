@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechZone</title>
+    <!-- locomotive css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- remix icon cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- ========= CUSTOM CSS ========= -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -13,6 +17,8 @@
 </head>
 
 <body>
+
+
     <!-- ========= NAVBAR ========= -->
     <header class="navbar">
         <nav>
@@ -33,17 +39,18 @@
     </header>
     <main>
         <!-- ========= HERO SECTION ========= -->
-        <section id="hero">
+        <section id="hero" data-scroll data-scroll-speed="2">
             <article class="content">
-                <h1>
-                    Rebuilding TechZone Pookie07 Watch
+                <div class="hero-title hero-anime">
+                    <h1>Rebuilding TechZone Pookie07 Watch</h1>
                     <div class="title-img"></div>
-                </h1>
-                <p>
+                </div>
+
+                <p class="hero-anime">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Necessitatibus, eius.
                 </p>
-                <div class="btn-container">
+                <div class="btn-container hero-anime">
                     <button>Order Now</button>
                     <button>Explore Features</button>
                 </div>
@@ -54,7 +61,7 @@
             </aside>
         </section>
         <!-- ========= DESCRIPTION SECTION ========= -->
-        <section id="des"> <div class=""></div>
+        <section id="des">
             <div class="des-container">
                 <h2>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
@@ -68,9 +75,10 @@
                     <h1>50K+</h1>
                     <p>User Love</p>
                 </div>
-                <h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                    quidem, aliquam molestias doloribus in quas?
+                <h3 class="elem-text">
+                    From ultra-fast laptops to powerful smartphones, sleek smartwatches to immersive earbuds —
+                    experience innovation that fits your lifestyle.
+                </h3>
                 </h3>
             </div>
             <div class="watch-preview">
@@ -204,26 +212,32 @@
                     <div class="feature-card">
                         <h3>1</h3>
                         <h2>Smart Fitness Tracking</h2>
+                        <img src="./assets/images/1.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
                         <h3>1</h3>
-                        <h2>Smart Fitness Tracking</h2>
+                        <h2>AI-Powered Health Insights</h2>
+                        <img src="./assets/images/2.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
                         <h3>1</h3>
-                        <h2>Smart Fitness Tracking</h2>
+                        <h2>Real-Time Body Monitoring</h2>
+                        <img src="./assets/images/wristwatch.webp" alt="">
+
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
                         <h3>1</h3>
-                        <h2>Smart Fitness Tracking</h2>
+                        <h2>Personalized Workout Plans</h2>
+                        <img src="./assets/images/male-watch.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
                         <h3>1</h3>
-                        <h2>Smart Fitness Tracking</h2>
+                        <h2>Track. Train. Transform</h2>
+                        <img src="./assets/images/male-watch-2.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                 </div>
@@ -287,6 +301,32 @@
                 </ul>
             </div>
         </section>
+        <!-- testimonial section -->
+        <section class="testimonial-section">
+            <div class="testimonial-container">
+                <div class="testimonial-grid">
+                    <div class="image-container" id="image-container"></div>
+                    <div class="testimonial-content">
+                        <div>
+                            <h3 class="name" id="name"></h3>
+                            <p class="designation" id="designation"></p>
+                            <p class="quote" id="quote"></p>
+                        </div>
+                        <div class="arrow-buttons">
+                            <button class="arrow-button" id="prev-button">
+                                <i class="ri-arrow-left-s-fill"></i>
+                            </button>
+                            <button class="arrow-button" id="next-button">
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
         <!-- ========= CONNECT SECTION ========= -->
         <section id="connect">
             <div class="connect-container">
@@ -306,16 +346,22 @@
 
     </main>
 
+
+    <!-- ========= LOCOMOTIVE CDN  ========= -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <!-- ========= GSAP CDN  ========= -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- ========= SCROLL TRIGGER CDN  ========= -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"
-        integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+
+    <!-- ========= vanilla-tilt CDN  ========= -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 
     <!-- ========= CUSTOM JS ========= -->
     <script src="/assets/js/home.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/locomotive.js"></script>
 </body>
 
 </html>
