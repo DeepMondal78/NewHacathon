@@ -24,7 +24,13 @@ a {
 }
 
 @import './components/variables';
-
+@import './components/base';
+@import './components/flexbox';
+@import './components/backdropfilter';
 @import './components/navber';
 @import './components/section';
 @import './components/home';
+@import './components/collection';
+@import './components/earbuds-section';
+// @import './components/'
+@import './components/laptopsection'

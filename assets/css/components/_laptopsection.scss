@@ -1,0 +1,162 @@
+.laptop-section {
+    height: 100vh;
+    font-family: "montserrat-latin-500-normal";
+    .bg-card {
+        position: absolute;
+        opacity: 0.9;
+        @include backdropfilter(35px);
+        width: 100%;
+        height: 100%;
+    }
+
+    .bg-overly,
+    .sec-bg-overly {
+        width: 35rem;
+        height: 35rem;
+        background-color: $p-color;
+        opacity: 0.9;
+        border-radius: 50%;
+        filter: blur(50px);
+        position: absolute;
+    }
+
+    .bg-overly {
+        top: -19%;
+        right: -15%;
+    }
+
+    .sec-bg-overly {
+        left: -4%;
+        bottom: -10%;
+    }
+
+    .laptop-member {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .laptop-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 70%;
+            height: 75vh;
+            background-color: #21212C;
+            transform: translate(-50%, -50%);
+            border-radius: 12px;
+            overflow: hidden;
+
+
+
+            @media (max-width: 640px) {
+                width: 95%;
+                height: 50vh;
+            }
+
+            .laptop-img {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .laptop-info {
+                position: absolute;
+                bottom: 0;
+                left: 2.5rem;
+                height: 20vh;
+                color: white;
+                text-align: left;
+
+                @media (max-width:850px) {
+                    h1 {
+                        font-size: 2rem !important;
+                    }
+                }
+
+                @media (max-width: 640px) {
+                    height: 12vh;
+                    left: 0.75rem;
+                }
+
+                h3 {
+                    color: #5AFF00;
+                    font-size: 1.25rem;
+
+                    @media (max-width: 640px) {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    font-size: 4rem;
+
+                    @media (max-width: 640px) {
+                        font-size: 2rem;
+                    }
+                }
+
+                .laptop-brand {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    @media (max-width: 640px) {
+                        gap: 0.5rem;
+                    }
+
+                    img {
+                        height: 1.5rem;
+
+                        @media (max-width: 640px) {
+                            height: 0.75rem;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+
+
+        }
+
+        #card-one {
+            top: 130%;
+           
+        }
+
+        #card-two {
+            top: 230%;
+            
+        }
+
+        #card-three {
+            top: 250%;
+            
+        }
+
+        #card-four {
+            top: 350%;
+           
+        }
+
+        #card-five {
+            top: 450%;
+           
+        }
+    }
+
+}

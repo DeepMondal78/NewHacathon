@@ -1,0 +1,74 @@
+.earbuds-section {
+  padding: 2rem;
+  position: relative;
+
+  .bg-overly,
+  .sec-bg-overly {
+    width: 35rem;
+    height: 35rem;
+    background-color: $p-color;
+    border-radius: 50%;
+    filter: blur(50px);
+    position: absolute;
+  }
+
+  .bg-overly {
+    top: -19%;
+    z-index: -1;
+    right: -15%;
+  }
+
+  .sec-bg-overly {
+    left: -4%;
+    bottom: -10%;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-family: "montserrat-latin-500-normal";
+
+  }
+
+  .earbuds-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .earbuds-card {
+      position: relative;
+      background: #282933;
+      width: 30rem !important;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      z-index: 9;
+
+      .product-img {
+        width: 100%;
+        max-width: 25rem;
+        margin: 0 auto;
+        display: block;
+      }
+
+      @import './button';
+
+      .heart-icon {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

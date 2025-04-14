@@ -1,0 +1,243 @@
+.collection {
+    width: 100%;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+
+    .cursor-picture {
+        position: absolute;
+        opacity: 0;
+        width: 250px;
+        object-fit: contain;
+        pointer-events: none;
+        transform: scale(0.8);
+        z-index: 20;
+    }
+
+    .bg-overly,
+    .sec-bg-overly {
+        width: 35rem;
+        height: 35rem;
+        background-color: $p-color;
+        border-radius: 50%;
+        filter: blur(50px);
+        position: absolute;
+    }
+
+    .bg-overly {
+        top: 47%;
+        right: -23%;
+    }
+
+    .sec-bg-overly {
+        left: -43%;
+        bottom: 48%;
+        z-index: -1;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        font-family: "montserrat-latin-700-normal";
+
+    }
+
+    .main-heading {
+        padding: 1rem;
+        margin: auto;
+        position: relative;
+        font-family: "montserrat-latin-500-normal";
+
+
+        .animPara {
+            width: 100%;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+
+            .word {
+                display: inline-block;
+                font-size: 2rem;
+                margin-right: 1rem;
+                overflow: hidden;
+
+                span {
+                    display: inline-block;
+                    font-size: 2rem;
+                    transform: translateY(100%);
+                    opacity: 0;
+
+                }
+            }
+
+            .imgdiv {
+                pointer-events: none;
+                position: absolute;
+                width: 200px !important;
+                height: 200px !important;
+                overflow: hidden;
+                z-index: 99;
+                background-color: red;
+
+                img {
+                    transform: translateY(100%);
+                    opacity: 0;
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: cover;
+                }
+            }
+
+        }
+
+        @media (max-width:550px) {
+            .main-heading {
+                width: 90vw;
+            }
+        }
+    }
+}
+
+.products-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .bg-overly,
+    .sec-bg-overly {
+        width: 35rem;
+        height: 35rem;
+        background-color: $p-color;
+        border-radius: 50%;
+        filter: blur(50px);
+        position: absolute;
+    }
+
+    .bg-overly {
+        top: -19%;
+        right: -15%;
+    }
+
+    .sec-bg-overly {
+        left: -4%;
+        bottom: -10%;
+    }
+}
+
+.vdiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+
+.vdiv video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    i {
+        font-size: 60px !important;
+        color: #fff;
+    }
+}
+
+.smartphone-section {
+    padding: 2rem;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    font-family: "montserrat-latin-500-normal";
+
+    .bg-overly,
+    .sec-bg-overly {
+        width: 35rem;
+        height: 35rem;
+        background-color: $p-color;
+        border-radius: 50%;
+        filter: blur(50px);
+        position: absolute;
+    }
+
+    .bg-overly {
+        top: 19%;
+        right: -35%;
+        z-index: -1;
+    }
+
+    .sec-bg-overly {
+        left: -4%;
+        bottom: -10%;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        justify-items: center;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 1rem;
+        width: 100%;
+        max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease;
+        @include backdropfilter(35px);
+        z-index: 9;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: 80%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .card-footer {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            
+
+            .heart {
+                font-size: 1.2rem;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
