@@ -40,6 +40,9 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
+header nav .menu-bar {
+  display: none;
+}
 
 .nav-items {
   display: flex;
@@ -725,6 +728,7 @@ main section {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+  z-index: 9;
 }
 #connect .connect-container .contact .bg .background {
   position: absolute;
@@ -759,6 +763,8 @@ main section {
   }
 }
 #connect .connect-container .contact .bg .background {
+  opacity: 20%;
   top: 0;
-  left: 50%;
+  left: 30%;
+  z-index: 1;
 }

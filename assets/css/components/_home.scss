@@ -76,7 +76,6 @@
 }
 
 
-
 #hero {
     display: flex;
     align-items: center;
@@ -623,13 +622,18 @@
                     height: 100%;
                     object-fit: cover;
                     object-position: top;
+                    z-index: 9;
                 }
                 @include bg;
                 .background {
+                    opacity: 20%;
                     top: 0;
-                    left: 50%;
+                    left: 30%;
+                    z-index: 1;
                 }
+
             }
         }
     }
 }
+
