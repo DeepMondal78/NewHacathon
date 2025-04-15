@@ -1,0 +1,77 @@
+// Custom cursor styles
+:root {
+    --cursor-size: 25px;
+    --cursor-dot-size: 5px;
+    --cursor-color: #ffffff;
+    --cursor-active-color: #1bf8c7;
+    --trail-size: 40px;
+    --trail-color: rgba(255, 255, 255, 0.5);
+}
+
+// body {
+//     // cursor: none;
+// }
+
+.cursor {
+    position: fixed;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    background-color: transparent;
+    border: 1.5px solid var(--cursor-color);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, border-color 0.2s;
+    mix-blend-mode: difference;
+
+    &.active {
+        width: calc(var(--cursor-size) * 2);
+        height: calc(var(--cursor-size) * 2);
+        border-color: var(--cursor-active-color);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+
+    .cursor-dot {
+        position: absolute;
+        width: var(--cursor-dot-size);
+        height: var(--cursor-dot-size);
+        background-color: var(--cursor-color);
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.trail-segments {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.trail-segment {
+    position: fixed;
+    width: var(--trail-size);
+    height: var(--trail-size);
+    background: radial-gradient(
+        circle,
+        var(--trail-color) 0%,
+        rgba(255, 255, 255, 0) 80%
+    );
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    mix-blend-mode: difference;
+}
+
+// Cursor effects on hover
+a, button, .menu-item {
+    &:hover ~ .cursor {
+        width: calc(var(--cursor-size) * 2);
+        height: calc(var(--cursor-size) * 2);
+        border-color: var(--cursor-active-color);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+}

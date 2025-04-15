@@ -1,6 +1,7 @@
 .laptop-section {
     height: 100vh;
     font-family: "montserrat-latin-500-normal";
+
     .bg-card {
         position: absolute;
         opacity: 0.9;
@@ -14,7 +15,7 @@
         width: 35rem;
         height: 35rem;
         background-color: $p-color;
-        opacity: 0.9;
+        opacity: 50%;
         border-radius: 50%;
         filter: blur(50px);
         position: absolute;
@@ -91,7 +92,7 @@
                 }
 
                 h3 {
-                    color: #5AFF00;
+                    color: $p-color;
                     font-size: 1.25rem;
 
                     @media (max-width: 640px) {
@@ -135,27 +136,27 @@
 
         #card-one {
             top: 130%;
-           
+
         }
 
         #card-two {
             top: 230%;
-            
+
         }
 
         #card-three {
             top: 250%;
-            
+
         }
 
         #card-four {
             top: 350%;
-           
+
         }
 
         #card-five {
             top: 450%;
-           
+
         }
     }
 

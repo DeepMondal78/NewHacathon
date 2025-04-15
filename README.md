@@ -60,9 +60,9 @@ This is a **team project** built during a **Hackathon**. Here's the squad that m
 
 | Name            | Role                 | GitHub Profile                                |
 |-----------------|----------------------|-----------------------------------------------|
-| Joni Halder     | Frontend Developer   | [@yourgithub](https://github.com/yourgithub) |
-| Sudip Das Ghosh | Frontend Developer   | [@teammategithub](https://github.com/teammategithub) |
-| Deep Mondal     | Frontend Developer   | [@backendgithub](https://github.com/back)     |
+| Joni Halder     | Frontend Developer   | [@yourgithub](https://github.com/joni7679) |
+| Sudip Das Ghosh | Frontend Developer   | [@teammategithub](https://github.com/IamSudipDG) |
+| Deep Mondal     | Frontend Developer   | [@backendgithub](https://github.com/DeepMondal78)     |
 
 ---
 

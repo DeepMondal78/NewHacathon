@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechZone</title>
+    <title>TechZone | Exclusive Product Launch: Smartwatches, Smartphones, Laptops</title>
+
+    <!-- Corrected Meta -->
+    <meta name="title" content="TechZone | Exclusive Product Launch: Smartwatches, Smartphones, Laptops">
+    <meta name="description"
+        content="Join our launch event and explore the future of tech with our premium collection of smartwatches, latest smartphones, and cutting-edge laptops. Don't miss the deals!">
+
     <!-- locomotive css cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <!-- remix icon cdn -->
@@ -13,11 +19,20 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- ========= FONT AWESOME CDN ========= -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
 <body>
-
-
+    <div class="launch-wrapper">
+        <div class="loading-screen">
+            <div class="counter">0%</div>
+        </div>
+    </div>
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+    <div class="trail-segments"></div>
     <!-- ========= NAVBAR ========= -->
     <header class="navbar">
         <nav>
@@ -32,6 +47,9 @@
         </nav>
     </header>
     <main>
+
+
+
         <!-- ========= HERO SECTION ========= -->
         <section id="hero" data-scroll data-scroll-speed="2">
             <article class="content">
@@ -41,8 +59,8 @@
                 </div>
 
                 <p class="hero-anime">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus, eius.
+                    Launching soon — a product designed to inspire, empower, and simplify your everyday life.
+
                 </p>
                 <div class="btn-container hero-anime">
                     <button>Order Now</button>
@@ -56,11 +74,11 @@
         </section>
         <!-- ========= DESCRIPTION SECTION ========= -->
         <section id="des">
+
             <div class="des-container">
-                <h2>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                    odit.
-                </h2>
+                <h3 class="elem-text">
+                    The future is here — experience the next generation of innovation.
+                </h3>
                 <div class="center">
                     <div class="users">
                         <img src="./assets/images/user(1).webp" alt="" />
@@ -70,76 +88,24 @@
                     <p>User Love</p>
                 </div>
                 <h3 class="elem-text">
-                    From ultra-fast laptops to powerful smartphones, sleek smartwatches to immersive earbuds —
-                    experience innovation that fits your lifestyle.
+                    Launching soon: A product designed to change the way you live and work.
+
                 </h3>
                 </h3>
             </div>
-            <div class="watch-preview">
+
+            <!-- <div class="watch-preview">
                 <div class="circle">
                     <div class="logo"></div>
                     <div class="text" id="image-text">
                         <p></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
         </section>
         <!-- ========= FEATURES SECTION ========= -->
-        <section id="features">
-            <div class="features-container">
-                <div class="title">
-                    <h1>OUR SERVICE <span>FEATURES</span></h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab nisi
-                        sed fugit quasi nihil enim nam iusto quia assumenda suscipit.
-                    </p>
-                </div>
 
-                <div class="watch-grid">
-                    <div class="features left">
-                        <div class="feature">
-                            <img src="./assets/images/fectures-1.webp" alt="" />
-                            <h4>Apple Version</h4>
-                            <p>Apple officially 10.0</p>
-                        </div>
-                        <div class="feature">
-                            <img src="./assets/images/feactures-2.webp" alt="" />
-                            <h4>Internet Service</h4>
-                            <p>4G Smart Watches</p>
-                        </div>
-                        <div class="feature">
-                            <img src="./assets/images/features-3.webp" alt="" />
-                            <h4>Music Player</h4>
-                            <p>Use the Music app</p>
-                        </div>
-                    </div>
-
-                    <div class="watches">
-                        <img src="./assets/images/17.webp" alt="Watch 1" />
-                        <img src="./assets/images/16.webp" alt="Watch 2" />
-                        <div class="background"></div>
-                    </div>
-
-                    <div class="features right">
-                        <div class="feature">
-                            <img src="./assets/images/fectures-1.webp" alt="" />
-                            <h4>Battery</h4>
-                            <p>Battery life is 18 hours</p>
-                        </div>
-                        <div class="feature">
-                            <img src="./assets/images/feactures-2.webp" alt="" />
-                            <h4>Settings</h4>
-                            <p>Choose your settings.</p>
-                        </div>
-                        <div class="feature">
-                            <img src="./assets/images/features-3.webp" alt="" />
-                            <h4>Messages</h4>
-                            <p>Open the Messages app</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- ========= EXPERIENCES SECTION ========= -->
         <section id="experience">
             <div class="graphic">
@@ -204,32 +170,37 @@
                 </div>
                 <div class="features">
                     <div class="feature-card">
+                        <div class="overly"></div>
                         <h3>1</h3>
                         <h2>Smart Fitness Tracking</h2>
-                        <img src="./assets/images/1.webp" alt="">
+                        <img src="./assets/images/2.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
-                        <h3>1</h3>
+                        <div class="overly"></div>
+                        <h3>2</h3>
                         <h2>AI-Powered Health Insights</h2>
                         <img src="./assets/images/2.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
-                        <h3>1</h3>
+                        <div class="overly"></div>
+                        <h3>3</h3>
                         <h2>Real-Time Body Monitoring</h2>
                         <img src="./assets/images/wristwatch.webp" alt="">
 
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
-                        <h3>1</h3>
+                        <div class="overly"></div>
+                        <h3>4</h3>
                         <h2>Personalized Workout Plans</h2>
                         <img src="./assets/images/male-watch.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
                     </div>
                     <div class="feature-card">
-                        <h3>1</h3>
+                        <div class="overly"></div>
+                        <h3>5</h3>
                         <h2>Track. Train. Transform</h2>
                         <img src="./assets/images/male-watch-2.webp" alt="">
                         <h3><i class="fa-solid fa-arrow-right"></i></h3>
@@ -241,29 +212,29 @@
         <section id="tech">
             <div class="tech-container">
                 <div class="tech-img">
-                    <img src="./assets/images/tech.webp" alt="">
+                    <img src="./assets/images/tech.webp" alt="Tech Image" />
                 </div>
+
                 <article class="content">
                     <h2>Unlocking the Tech Magic Behind Wearables</h2>
                     <div class="label-container">
                         <div class="label">
                             <h3>Heart Rate Sensor</h3>
-                            <h3>98%</h3>
+                            <h3 class="percent">98%</h3>
                         </div>
-
                         <div class="label">
                             <h3>Heart Rate Sensor</h3>
-                            <h3>98%</h3>
+                            <h3 class="percent">98%</h3>
                         </div>
-
                         <div class="label">
                             <h3>Heart Rate Sensor</h3>
-                            <h3>98%</h3>
+                            <h3 class="percent">98%</h3>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
+
         <!-- ========= MARQUEE SECTION ========= -->
         <section id="marquee">
             <div class="upper-marquee marquee">
@@ -319,8 +290,6 @@
             </div>
         </section>
 
-
-
         <!-- ========= CONNECT SECTION ========= -->
         <section id="connect">
             <div class="connect-container">
@@ -338,24 +307,77 @@
             </div>
         </section>
 
+        <!-- ========= FOOTER ========= -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <h2>TechZone</h2>
+                    <p>Your gateway to the future of tech innovation.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Integrations</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© 2025 TechZone. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
     </main>
 
 
     <!-- ========= LOCOMOTIVE CDN  ========= -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <!-- ========= GSAP CDN  ========= -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
+        integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- ========= SCROLL TRIGGER CDN  ========= -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"
+        integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- ========= vanilla-tilt CDN  ========= -->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 
     <!-- ========= CUSTOM JS ========= -->
-    <script src="/assets/js/home.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/locomotive.js"></script>
+  
+    <script src="./assets/js/customCursor.js"></script>
+    <script src="/assets/js/home.js" defer></script>
+    <script src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/locomotive.js" defer></script>
 </body>
 
 </html>

@@ -9,8 +9,14 @@ html,
 body {
     width: 100vw;
     scroll-behavior: smooth;
-    background: #111;
+    // 
     color: white;
+
+}
+
+main {
+    overflow: hidden;
+    background: #0f0d0d;
 }
 
 ul {
@@ -25,6 +31,8 @@ a {
 
 @import './components/variables';
 @import './components/base';
+@import './components/loading';
+@import './components/customCursor.scss';
 @import './components/flexbox';
 @import './components/backdropfilter';
 @import './components/navber';
@@ -32,5 +40,5 @@ a {
 @import './components/home';
 @import './components/collection';
 @import './components/earbuds-section';
-// @import './components/'
-@import './components/laptopsection'
+@import './components/laptopsection';
+@import './components/footer'
