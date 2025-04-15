@@ -1,0 +1,262 @@
+@media only screen and (max-width: 800px) {
+  .background {
+    z-index: 1;
+  }
+  .bg {
+    z-index: 1 !important;
+  }
+  section {
+    padding: 4rem 1rem;
+  }
+  section article,
+  section aside {
+    width: 100% !important;
+    padding: 1rem 0.5;
+  }
+  .title {
+    max-width: 100%;
+    margin: 0;
+  }
+  .title h1 {
+    font-size: 1.4rem;
+  }
+  header {
+    padding: 0;
+  }
+  header nav {
+    padding: 1rem;
+    position: relative;
+    align-items: center;
+  }
+  header nav .menu-bar {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+  }
+  header nav .menu-bar .bar {
+    height: 2px;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+  }
+  header nav .menu-bar.active .bar:nth-child(1) {
+    transform: rotate(35deg) translateY(14px);
+  }
+  header nav .menu-bar.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  header nav .menu-bar.active .bar:nth-child(3) {
+    transform: rotate(-35deg) translateY(-10px);
+  }
+  header nav .nav-items {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    right: -100%;
+    background: rgb(119, 119, 255);
+    transition: 0.3s all ease;
+    z-index: -1;
+  }
+  header nav .nav-show {
+    right: 0;
+  }
+  #hero {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 4rem 1rem;
+    flex-direction: column-reverse;
+  }
+  #hero .content {
+    text-align: center;
+    align-items: center;
+  }
+  #hero .content h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  #des {
+    padding: 4rem 1rem;
+    width: 100%;
+  }
+  #des .des-container {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #des .des-container h2,
+  #des .des-container h3 {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  #des .watch-preview .circle {
+    --width: 300px;
+    --height: 300px;
+    width: var(--width);
+    height: var(--height);
+  }
+  #des .watch-preview .circle .logo {
+    width: 180px;
+    height: 180px;
+  }
+  #des .watch-preview .circle .text .char {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 800px) and (max-width: 480px) {
+  #des .circle {
+    --width: 220px;
+    --height: 220px;
+  }
+  #des .circle .logo {
+    width: 130px;
+    height: 130px;
+  }
+  #des .circle .text .char {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #features {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1rem;
+  }
+  #features .watch-grid {
+    padding: 3rem 2rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  #features .watch-grid .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+  #features .watch-grid .features .feature {
+    width: 100%;
+  }
+  #features .watch-grid .watches {
+    margin: 4rem 0;
+    gap: 0.5rem;
+  }
+  #features .watch-grid .watches .background {
+    width: 250px;
+    height: 250px;
+  }
+  #experience {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #experience .experience-container {
+    padding: 0;
+  }
+  #experience .experience-container .experiences {
+    margin-top: 3rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #experience .experience-container .experiences .experience-card {
+    width: 90%;
+  }
+  #experience .experience-container .experiences .experience-card .content p {
+    font-size: 0.8rem;
+  }
+  #ad {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0 1rem;
+  }
+  #ad .ad-container .video-container {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 3rem;
+  }
+  #feature-review {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 3rem 1rem;
+  }
+  #feature-review .features {
+    width: 100%;
+  }
+  #feature-review .features .feature-card h3 {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  #feature-review .features .feature-card h2 {
+    font-size: 1rem;
+  }
+  #tech {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #tech .tech-container {
+    padding: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #tech .tech-container .tech-img {
+    display: flex;
+    justify-content: center;
+  }
+  #tech .tech-container .tech-img img {
+    width: 70%;
+  }
+  #tech .tech-container .content {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 2rem 1rem;
+  }
+  #tech .tech-container .content h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  #marquee {
+    margin-top: 12rem;
+  }
+  #marquee .marquee .marquee-item {
+    font-size: 1rem;
+  }
+  #marquee .marquee .marquee-item li:nth-child(1) {
+    border: 2px solid white;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+  }
+  #marquee .marquee .marquee-item li:nth-child(2) {
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+  }
+  #marquee .marquee .marquee-item li:nth-child(2) p {
+    white-space: nowrap;
+  }
+  #connect {
+    padding: 2rem 0;
+    margin-top: 2rem;
+  }
+  #connect .connect-container .contact .bg {
+    height: 200px;
+    overflow: hidden;
+  }
+  #connect .connect-container .contact .bg img {
+    width: 100%;
+    height: 150%;
+  }
+}

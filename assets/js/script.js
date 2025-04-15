@@ -107,3 +107,10 @@ document.querySelectorAll('.menu-item').forEach(item => {
     });
   });
 });
+
+const menuToggle = document.getElementById("menuToggle");
+const navItems = document.querySelector(".nav-items");
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  navItems.classList.toggle("nav-show");
+});
