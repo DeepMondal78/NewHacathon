@@ -49,12 +49,14 @@
     .bg-overly {
         top: 47%;
         right: -23%;
+        opacity: 50%;
     }
 
     .sec-bg-overly {
-        left: -43%;
+        left: -22%;
         bottom: 48%;
         z-index: -1;
+        opacity: 55%;
     }
 
     .title {
@@ -92,24 +94,26 @@
                 }
             }
 
-            .imgdiv {
-                pointer-events: none;
-                position: absolute;
-                width: 200px !important;
-                height: 200px !important;
-                overflow: hidden;
-                z-index: 99;
-                background-color: red;
 
-                img {
-                    transform: translateY(100%);
-                    opacity: 0;
-                    width: 100% !important;
-                    height: 100% !important;
-                    object-fit: cover;
-                }
+
+        }
+
+        .imgdiv {
+            pointer-events: none;
+            position: absolute;
+            width: 200px !important;
+            height: 200px !important;
+            overflow: hidden;
+            z-index: 99;
+            overflow: hidden;
+
+            img {
+                transform: translateY(100%);
+                opacity: 0;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
             }
-
         }
 
         @media (max-width:550px) {
@@ -225,6 +229,7 @@
         padding: 1rem;
         width: 100%;
         max-width: 25rem;
+        height: 25rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -238,7 +243,7 @@
 
         img {
             width: 100%;
-            height: 80%;
+            height: 90%;
             border-radius: 10px;
             object-fit: contain;
         }

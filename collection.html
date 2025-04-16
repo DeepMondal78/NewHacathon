@@ -15,18 +15,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
+
+    <div class="launch-wrapper">
+        <div class="loading-screen">
+            <div class="counter">0%</div>
+        </div>
+    </div>
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+    <div class="trail-segments"></div>
     <!-- ========= NAVBAR ========= -->
     <header class="navbar">
         <nav>
             <h1>TechZone</h1>
+            <div class="menu-bar" id="menuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <ul class="nav-items">
-                <li><a href="">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Product</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="" class="menu-item">Home</a></li>
+                <li><a href="" class="menu-item">About Us</a></li>
+                <li><a href="" class="menu-item">Product</a></li>
+                <li><a href="./collection.html" class="menu-item">collection</a></li>
+                <li><a href="" class="menu-item">Blog</a></li>
                 <li><button>Order Now</button></li>
             </ul>
         </nav>
@@ -45,43 +62,31 @@
             </div>
         </section>
 
-        <!-- Product Video -->
-        <section class="products-section">
-            <!-- <div class="vdiv" style="--clip: 0%">
-                <div class="circle">
-                    <i class="ri-play-circle-fill"></i>
-                </div>
-                <video loop muted autoplay src="./assets/video/coder.mp4"></video>
-            </div> -->
-        </section>
-
         <!-- Earbuds -->
         <section class="earbuds-section">
             <div class="bg-overly"></div>
             <div class="sec-bg-overly"></div>
             <h2 class="section-title">Our Earbuds Collection</h2>
             <div class="earbuds-grid">
-                <!-- Repeated earbuds cards -->
-                <!-- You can loop with JS later -->
                 <div class="earbuds-card">
-                    <img src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
+                    <img loading="lazy" src="./assets/images/earbuds.webp" alt="Earbuds" class="product-img" />
                     <button class="see-more-btn">See More</button>
                     <span class="heart-icon"><i class="ri-heart-3-fill"></i></span>
                 </div>
                 <div class="earbuds-card">
-                    <img src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
-                    <button class="see-more-btn">See More</button>
-                    <span class="heart-icon"><i class="ri-heart-3-fill"></i></span>
-                </div>
-
-                <div class="earbuds-card">
-                    <img src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
+                    <img loading="lazy" src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
                     <button class="see-more-btn">See More</button>
                     <span class="heart-icon"><i class="ri-heart-3-fill"></i></span>
                 </div>
 
                 <div class="earbuds-card">
-                    <img src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
+                    <img loading="lazy"  src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
+                    <button class="see-more-btn">See More</button>
+                    <span class="heart-icon"><i class="ri-heart-3-fill"></i></span>
+                </div>
+
+                <div class="earbuds-card">
+                    <img loading="lazy" src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
                     <button class="see-more-btn">See More</button>
                     <span class="heart-icon"><i class="ri-heart-3-fill"></i></span>
                 </div>
@@ -96,7 +101,7 @@
             <div class="card-grid">
                 <!-- Repeatable smartphone cards -->
                 <div class="card">
-                    <img src="./assets/images/smartphone.png" alt="Smartphone">
+                    <img  loading="lazy" src="./assets/images/smartphone.png" alt="Smartphone">
                     <div class="card-footer">
                         <button class="see-more">See More</button>
                         <span class="heart"><i class="ri-heart-3-fill"></i></span>
@@ -104,7 +109,7 @@
                 </div>
 
                 <div class="card">
-                    <img src="./assets/images/smartphone.png" alt="Smartphone">
+                    <img  loading="lazy" src="./assets/images/smartphone.png" alt="Smartphone">
                     <div class="card-footer">
                         <button class="see-more">See More</button>
                         <span class="heart"><i class="ri-heart-3-fill"></i></span>
@@ -112,7 +117,7 @@
                 </div>
 
                 <div class="card">
-                    <img src="./assets/images/smartphone.png" alt="Smartphone">
+                    <img loading="lazy" src="./assets/images/smartphone.png" alt="Smartphone">
                     <div class="card-footer">
                         <button class="see-more">See More</button>
                         <span class="heart"><i class="ri-heart-3-fill"></i></span>
@@ -120,7 +125,7 @@
                 </div>
 
                 <div class="card">
-                    <img src="./assets/images/smartphone.png" alt="Smartphone">
+                    <img loading="lazy" src="./assets/images/smartphone.png" alt="Smartphone">
                     <div class="card-footer">
                         <button class="see-more">See More</button>
                         <span class="heart"><i class="ri-heart-3-fill"></i></span>
@@ -129,7 +134,7 @@
             </div>
         </section>
 
-        <!-- Laptops -->
+        <!-- Laptops section -->
         <section class="laptop-section">
             <div class="bg-overly"></div>
             <div class="sec-bg-overly"></div>
@@ -215,7 +220,50 @@
             </div>
         </section>
 
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <h2>TechZone</h2>
+                    <p>Your gateway to the future of tech innovation.</p>
+                </div>
 
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Integrations</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© 2025 TechZone. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
 
     </main>
 
@@ -231,9 +279,12 @@
         src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 
     <!-- ========= custom js ========= -->
+    <script src="./assets/js/customCursor.js"></script>
+    <script src="/assets/js/home.js" defer></script>
+    <script src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
     <script src="./assets/js/locomotive.js" defer></script>
     <script src="./assets/js/collection.js" defer></script>
-    <script src="./assets/js/navbar.js" defer></script>
 </body>
 
 </html>

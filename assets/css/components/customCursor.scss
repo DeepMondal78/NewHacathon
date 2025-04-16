@@ -1,77 +1,83 @@
-// Custom cursor styles
 :root {
-    --cursor-size: 25px;
-    --cursor-dot-size: 5px;
-    --cursor-color: #ffffff;
-    --cursor-active-color: #1bf8c7;
-    --trail-size: 40px;
-    --trail-color: rgba(255, 255, 255, 0.5);
+    --background: #0e1116;
+    --white: #ffffff;
+    --accent: #1bf8c7;
+    --gray: #818a91;
+    --green: #1bf8c7;
+    --font-primary: "Helvetica Neue", sans-serif;
 }
 
-// body {
-//     // cursor: none;
-// }
-
-.cursor {
+.custom-cursor {
     position: fixed;
-    width: var(--cursor-size);
-    height: var(--cursor-size);
+    width: 90px;
+    height: 90px;
     background-color: transparent;
-    border: 1.5px solid var(--cursor-color);
+    border: 1.5px solid var(--white);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    transition: width 0.2s, height 0.2s, border-color 0.2s;
-    mix-blend-mode: difference;
-
-    &.active {
-        width: calc(var(--cursor-size) * 2);
-        height: calc(var(--cursor-size) * 2);
-        border-color: var(--cursor-active-color);
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-    }
-
-    .cursor-dot {
-        position: absolute;
-        width: var(--cursor-dot-size);
-        height: var(--cursor-dot-size);
-        background-color: var(--cursor-color);
-        border-radius: 50%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
 }
 
-.trail-segments {
-    position: fixed;
-    pointer-events: none;
-    z-index: 9998;
+.cursor-dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--white);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .trail-segment {
     position: fixed;
-    width: var(--trail-size);
-    height: var(--trail-size);
-    background: radial-gradient(
-        circle,
-        var(--trail-color) 0%,
-        rgba(255, 255, 255, 0) 80%
-    );
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0) 80%);
     pointer-events: none;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     z-index: 9998;
-    mix-blend-mode: difference;
 }
 
-// Cursor effects on hover
-a, button, .menu-item {
-    &:hover ~ .cursor {
-        width: calc(var(--cursor-size) * 2);
-        height: calc(var(--cursor-size) * 2);
-        border-color: var(--cursor-active-color);
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-    }
+.display {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9997;
+}
+
+.display h1 {
+    font-size: 2rem;
+    color: var(--accent);
+    letter-spacing: 0.15rem;
+    line-height: 1.2;
+}
+
+.display p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-top: 15px;
+}
+
+h1,
+p {
+    transition: color 0.3s ease-in-out;
+}
+
+.display h1:hover {
+    color: var(--white);
+}
+
+.display p:hover {
+    color: var(--accent);
 }
