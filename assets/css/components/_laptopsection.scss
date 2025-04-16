@@ -1,5 +1,6 @@
 .laptop-section {
     height: 100vh;
+    position: relative;
     font-family: "montserrat-latin-500-normal";
 
     .bg-card {
@@ -19,6 +20,7 @@
         border-radius: 50%;
         filter: blur(50px);
         position: absolute;
+        z-index: -1;
     }
 
     .bg-overly {
@@ -49,16 +51,14 @@
             left: 50%;
             width: 70%;
             height: 75vh;
-            background-color: #21212C;
+            background-color: #21212c;
             transform: translate(-50%, -50%);
             border-radius: 12px;
             overflow: hidden;
 
-
-
             @media (max-width: 640px) {
                 width: 95%;
-                height: 50vh;
+                height: auto;
             }
 
             .laptop-img {
@@ -79,20 +79,16 @@
                 height: 20vh;
                 color: white;
                 text-align: left;
-
-                @media (max-width:850px) {
-                    h1 {
-                        font-size: 2rem !important;
-                    }
-                }
+                padding-bottom: 1rem;
 
                 @media (max-width: 640px) {
-                    height: 12vh;
-                    left: 0.75rem;
+                    height: auto;
+                    left: 1rem;
+                    padding: 0.5rem;
                 }
 
                 h3 {
-                    color: #5AFF00;
+                    color: #5aff00;
                     font-size: 1.25rem;
 
                     @media (max-width: 640px) {
@@ -102,6 +98,10 @@
 
                 h1 {
                     font-size: 4rem;
+
+                    @media (max-width: 850px) {
+                        font-size: 2.5rem;
+                    }
 
                     @media (max-width: 640px) {
                         font-size: 2rem;
@@ -121,43 +121,40 @@
                         height: 1.5rem;
 
                         @media (max-width: 640px) {
-                            height: 0.75rem;
+                            height: 1rem;
                         }
                     }
 
                     h4 {
                         font-size: 1.125rem;
+
+                        @media (max-width: 640px) {
+                            font-size: 0.875rem;
+                        }
                     }
                 }
             }
-
-
         }
 
+        // Cards positioned for scroll/reveal effect (could be animated later with GSAP)
         #card-one {
             top: 130%;
-
         }
 
         #card-two {
             top: 230%;
-
         }
 
         #card-three {
             top: 250%;
-
         }
 
         #card-four {
             top: 350%;
-
         }
 
         #card-five {
             top: 450%;
-
         }
     }
-
 }

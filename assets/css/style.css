@@ -1425,11 +1425,11 @@ p {
   border-radius: 50%;
   filter: blur(50px);
   position: absolute;
+  z-index: -1;
 }
 .smartphone-section .bg-overly {
   top: 19%;
   right: -35%;
-  z-index: -1;
 }
 .smartphone-section .sec-bg-overly {
   left: -4%;
@@ -1445,6 +1445,11 @@ p {
   gap: 1.5rem;
   justify-items: center;
 }
+@media (max-width: 768px) {
+  .smartphone-section .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .smartphone-section .card {
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 12px;
@@ -1458,7 +1463,7 @@ p {
   transition: transform 0.3s ease;
   backdrop-filter: blur(35px);
   -webkit-backdrop-filter: blur(35px);
-  z-index: 9;
+  z-index: 1;
 }
 .smartphone-section .card:hover {
   transform: scale(1.05);
@@ -1481,9 +1486,14 @@ p {
   color: white;
   cursor: pointer;
 }
-@media (max-width: 768px) {
-  .smartphone-section {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) {
+  .smartphone-section .card {
+    height: auto;
+    padding: 0.8rem;
+  }
+  .smartphone-section .card img {
+    height: auto;
+    max-height: 15rem;
   }
 }
 
@@ -1501,10 +1511,10 @@ p {
   border-radius: 50%;
   filter: blur(50px);
   position: absolute;
+  z-index: -1;
 }
 .earbuds-section .bg-overly {
   top: -19%;
-  z-index: -1;
   right: -15%;
 }
 .earbuds-section .sec-bg-overly {
@@ -1525,19 +1535,15 @@ p {
   gap: 2rem;
   justify-items: center;
 }
-@media (max-width: 968px) {
-  .earbuds-section .earbuds-grid {
-    grid-template-columns: 1fr;
-  }
-}
 .earbuds-section .earbuds-grid .earbuds-card {
   position: relative;
   background: #282933;
-  width: 30rem !important;
+  width: 100%;
+  max-width: 30rem;
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
-  z-index: 9;
+  z-index: 1;
 }
 .earbuds-section .earbuds-grid .earbuds-card .product-img {
   width: 100%;
@@ -1581,9 +1587,26 @@ p {
   color: #fff;
   cursor: pointer;
 }
+@media (max-width: 1024px) {
+  .earbuds-section .earbuds-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .earbuds-section .earbuds-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .earbuds-section .earbuds-grid .earbuds-card {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+}
 
 .laptop-section {
   height: 100vh;
+  position: relative;
   font-family: "montserrat-latin-500-normal";
 }
 .laptop-section .bg-card {
@@ -1603,6 +1626,7 @@ p {
   border-radius: 50%;
   filter: blur(50px);
   position: absolute;
+  z-index: -1;
 }
 .laptop-section .bg-overly {
   top: -19%;
@@ -1629,7 +1653,7 @@ p {
   left: 50%;
   width: 70%;
   height: 75vh;
-  background-color: #21212C;
+  background-color: #21212c;
   transform: translate(-50%, -50%);
   border-radius: 12px;
   overflow: hidden;
@@ -1637,7 +1661,7 @@ p {
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card {
     width: 95%;
-    height: 50vh;
+    height: auto;
   }
 }
 .laptop-section .laptop-member .laptop-card .laptop-img {
@@ -1657,20 +1681,17 @@ p {
   height: 20vh;
   color: white;
   text-align: left;
-}
-@media (max-width: 850px) {
-  .laptop-section .laptop-member .laptop-card .laptop-info h1 {
-    font-size: 2rem !important;
-  }
+  padding-bottom: 1rem;
 }
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info {
-    height: 12vh;
-    left: 0.75rem;
+    height: auto;
+    left: 1rem;
+    padding: 0.5rem;
   }
 }
 .laptop-section .laptop-member .laptop-card .laptop-info h3 {
-  color: #5AFF00;
+  color: #5aff00;
   font-size: 1.25rem;
 }
 @media (max-width: 640px) {
@@ -1680,6 +1701,11 @@ p {
 }
 .laptop-section .laptop-member .laptop-card .laptop-info h1 {
   font-size: 4rem;
+}
+@media (max-width: 850px) {
+  .laptop-section .laptop-member .laptop-card .laptop-info h1 {
+    font-size: 2.5rem;
+  }
 }
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info h1 {
@@ -1701,11 +1727,16 @@ p {
 }
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info .laptop-brand img {
-    height: 0.75rem;
+    height: 1rem;
   }
 }
 .laptop-section .laptop-member .laptop-card .laptop-info .laptop-brand h4 {
   font-size: 1.125rem;
+}
+@media (max-width: 640px) {
+  .laptop-section .laptop-member .laptop-card .laptop-info .laptop-brand h4 {
+    font-size: 0.875rem;
+  }
 }
 .laptop-section .laptop-member #card-one {
   top: 130%;

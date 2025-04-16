@@ -198,12 +198,12 @@
         border-radius: 50%;
         filter: blur(50px);
         position: absolute;
+        z-index: -1;
     }
 
     .bg-overly {
         top: 19%;
         right: -35%;
-        z-index: -1;
     }
 
     .sec-bg-overly {
@@ -221,6 +221,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         justify-items: center;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     .card {
@@ -235,7 +239,7 @@
         align-items: center;
         transition: transform 0.3s ease;
         @include backdropfilter(35px);
-        z-index: 9;
+        z-index: 1;
 
         &:hover {
             transform: scale(1.05);
@@ -254,7 +258,6 @@
             justify-content: space-between;
             width: 100%;
 
-
             .heart {
                 font-size: 1.2rem;
                 color: white;
@@ -263,7 +266,15 @@
         }
     }
 
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
+    @media (max-width: 480px) {
+        .card {
+            height: auto;
+            padding: 0.8rem;
+
+            img {
+                height: auto;
+                max-height: 15rem;
+            }
+        }
     }
 }
