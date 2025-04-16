@@ -68,15 +68,16 @@ This is a **team project** built during a **Hackathon**. Here's the squad that m
 
 ## 🌐 Live Preview
 
-🔗 [View Live Site](#) *([Replace with your deployed URL](https://techzone-in.vercel.app/))*
+🔗 [View Live Site](https://techzone-in.vercel.app/)
 
 ---
 
 ## 📸 Screenshots
 
-![TechZone Landing Page] (./assets/images/landing.png)
+![TechZone Landing Page](./assets/images/landing.png)
 
 ---
+
 
 ## 📂 How to Run Locally
 
