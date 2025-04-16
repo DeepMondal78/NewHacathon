@@ -3,20 +3,15 @@ function textAnimation() {
     let allInnerSpans = [];
     paras.forEach((para) => {
         const words = para.textContent.split(" ");
-        // console.log(words);
         para.innerHTML = "";
         words.forEach((word) => {
-            // console.log(word);
             const wordWrapper = document.createElement("span");
-            // console.log(wordWrapper);
             wordWrapper.classList.add("word");
             const innerSpan = document.createElement("span");
-            // console.log("innerspan", innerSpan);
             innerSpan.textContent = word + " ";
             wordWrapper.appendChild(innerSpan);
             para.appendChild(wordWrapper);
-            // console.log(wordWrapper);
-            allInnerSpans.push(innerSpan); // collect here
+            allInnerSpans.push(innerSpan); 
         });
 
         gsap.to(para.querySelectorAll(".word span"), {
@@ -28,9 +23,6 @@ function textAnimation() {
         });
     });
 }
-// Laptop section animation
-
-
 function laptopSectionnAnimtion() {
     const laptopTl = gsap.timeline({
         defaults: { ease: "power2.out", duration: 1 },
@@ -41,7 +33,6 @@ function laptopSectionnAnimtion() {
             end: "+=2500",
             scrub: 1.5,
             pin: true,
-            // markers: true,
         }
     });
 
@@ -52,28 +43,7 @@ function laptopSectionnAnimtion() {
         .to("#card-four", { top: "60%" }, "start+=0.9")
         .to("#card-five", { top: "60%" }, "start+=1.2");
 }
-
-
-
-
 function earbudsAnimaion() {
-
-    // gsap.from(".earbuds-card", {
-    //     y:100,
-    //     opacity:0,
-    //     stagger:0.3,
-    //     duration:2.5,
-    //     ease: "expo.out",
-    //     scrollTrigger:{
-    //         trigger:".earbuds-section",
-    //         scroller:"main",
-    //         start:"top 50%",
-    //         end:"bottom 90%",
-    //         markers:true,
-    //         scrub:1.5,
-    //     }
-    // })
-
     VanillaTilt.init(document.querySelectorAll(".earbuds-card"), {
         max: 25,
         speed: 400,
@@ -109,7 +79,6 @@ function imgEffectShowCase() {
         { url: "https://images.unsplash.com/photo-1557531365-e8b22d93dbd0?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     ];
 
-
     const throttleFunction = (func, delay) => {
         let prev = 0;
         return (...args) => {
@@ -130,18 +99,15 @@ function imgEffectShowCase() {
         creatediv.style.position = "absolute";
         creatediv.style.left = `${e.clientX - 100}px`;
         creatediv.style.top = `${e.clientY - 100}px`;
-
         // Get random image
         const randomIndex = Math.floor(Math.random() * imgArry.length);
         const randomImage = imgArry[randomIndex];
-
         // Create image element
         let createimg = document.createElement("img");
         createimg.setAttribute("src", randomImage.url);
         createimg.style.width = "200px";
         createimg.style.objectFit = "cover";
         creatediv.appendChild(createimg);
-
         container.appendChild(creatediv);
         gsap.to(createimg, {
             y: "0%",
@@ -157,11 +123,10 @@ function imgEffectShowCase() {
             ease: "power2.in",
             onComplete: () => creatediv.remove()
         });
-
     }, 300));
 }
 
 textAnimation();
-laptopSectionnAnimtion()
+laptopSectionnAnimtion();
 earbudsAnimaion();
 imgEffectShowCase();

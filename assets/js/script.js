@@ -9,32 +9,27 @@ window.onload = () => {
 
     if (count >= 100) {
       clearInterval(interval);
-
-      // loader fade
       gsap.to(loadingScreen, {
         opacity: 0,
         duration: 1,
         ease: "power2.out",
         onComplete: () => {
-
-          // wrapper goes up
           gsap.to(launchWrapper, {
             y: "-100%",
             duration: 1,
             ease: "power2.inOut",
             onComplete: () => {
               launchWrapper.style.display = "none";
-
-              animateHeroSection(); // move your GSAP timeline into a function
-              textAnimation();      // call text animation
+              animateHeroSection(); 
+              textAnimation();  
             }
           });
         }
       });
     }
+
   }, 30);
 };
-
 
 function animateHeroSection() {
   const tl = gsap.timeline();
@@ -84,7 +79,6 @@ function animateHeroSection() {
     ease: "power4.out"
   }, "a");
 }
-
 function textAnimation() {
   const paras = document.querySelectorAll(".animPara");
   let allInnerSpans = [];
@@ -126,7 +120,6 @@ function textAnimation() {
     });
   });
 }
-
 // ==== NavMenu Mouse Hover Animetion ====
 function animateMenuItem(el) {
   let letters = el.textContent.split('').map(letter => {
@@ -134,6 +127,7 @@ function animateMenuItem(el) {
   }).join('');
   el.innerHTML = letters;
 }
+
 document.querySelectorAll('.menu-item').forEach(item => {
   animateMenuItem(item);
   let chars = item.querySelectorAll('span');
@@ -164,6 +158,7 @@ menuToggle.addEventListener("click", () => {
   navItems.classList.toggle("nav-show");
 });
 
+
 gsap.from(".nav-show .menu-item", {
   x: -100,
   opacity: 0,
@@ -171,3 +166,4 @@ gsap.from(".nav-show .menu-item", {
   ease: "power3.out",
   stagger: 0.2
 })
+

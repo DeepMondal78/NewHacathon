@@ -171,5 +171,4 @@ function testimonialAnimation() {
     window.addEventListener('resize', () => updateTestimonial(0));
 
 }
-
 testimonialAnimation();

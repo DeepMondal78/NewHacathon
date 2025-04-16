@@ -1,4 +1,4 @@
-function a() {
+function textAnimation() {
     document.addEventListener("DOMContentLoaded", () => {
 
         const text = document.getElementById("image-text");
@@ -39,4 +39,4 @@ function a() {
 
     });
 }
-a()
+textAnimation();

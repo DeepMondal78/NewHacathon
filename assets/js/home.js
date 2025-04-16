@@ -1,9 +1,6 @@
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
-
-
-
 function collectionAnimation() {
     const paras = document.querySelectorAll(".animPara");
 
@@ -31,63 +28,7 @@ function collectionAnimation() {
         });
     });
 
-
-
-
 }
-
-
-// const tl = gsap.timeline();
-
-// // Hero opacity
-// tl.from("#hero", {
-//     opacity: 0,
-//     duration: 1.5,
-//     ease: "power2.out"
-// })
-
-// // Hero scaling + translate
-// tl.from("#hero", {
-//     scaleX: 0.7,
-//     scaleY: 0.2,
-//     y: "80%",
-//     borderRadius: "100px",
-//     duration: 1.5,
-//     ease: "power4.out"
-// })
-
-// // Navbar heading
-// tl.from("nav h1", {
-//     y: -100,
-//     opacity: 0,
-//     duration: 0.8,
-//     ease: "power2.out"
-// }, "a")
-
-// // Navbar items
-// tl.from("ul li", {
-//     y: -100,
-//     opacity: 0,
-//     stagger: 0.2, 
-//     duration: 0.5,
-//     ease: "power2.out"
-// },"a")
-
-// tl.from(".hero-anime", {
-//     x: "-100%",
-//     opacity: 0,
-//     stagger: 0.2,
-//     duration: 1.2,
-//     ease: "power4.out"
-// },"a")
-
-// tl.from(".images", {
-//     x: 100,
-//     opacity: 0,
-//     duration: 1.2,
-//     ease: "power4.out"
-// }, "a") 
-
 
 // Text animation
 let textParts = document.querySelectorAll(".elem-text");
@@ -98,7 +39,6 @@ textParts.forEach((val) => {
         clutter += `<span>${char}</span>`;
     });
     val.innerHTML = clutter;
-
     gsap.to(val.querySelectorAll("span"), {
         color: "#fff",
         duration: 0.5,
@@ -108,7 +48,6 @@ textParts.forEach((val) => {
             start: "top 50%",
             end: "bottom 50%",
             scrub: 1,
-            // markers: true
         }
     });
 });
@@ -116,7 +55,6 @@ textParts.forEach((val) => {
 
 function featureCardsAnimation() {
     const featureCards = document.querySelectorAll(".feature-card");
-
     featureCards.forEach((card) => {
         const img = card.querySelector("img");
         card.addEventListener("mouseenter", () => {
@@ -155,7 +93,6 @@ function desContainerAnimation() {
         glare: true,
         "max-glare": 0.5
     });
-
 }
 
 gsap.utils.toArray(".label").forEach((label, i) => {
