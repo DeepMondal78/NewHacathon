@@ -1,4 +1,4 @@
-# 🚀 NewHackathon 
+# 🚀 product launch website 
 
 A modern, responsive, and animated landing page designed and developed for the **SkillsVarz 1.0  Hackathon Event**. This project showcases a product launch website with a focus on **UI/UX animations**, **smooth scrolling**, and **interactive components**.
 
@@ -68,13 +68,13 @@ This is a **team project** built during a **Hackathon**. Here's the squad that m
 
 ## 🌐 Live Preview
 
-🔗 [View Live Site](#) *(Replace with your deployed URL)*
+🔗 [View Live Site](#) *([Replace with your deployed URL](https://techzone-in.vercel.app/))*
 
 ---
 
 ## 📸 Screenshots
 
-*(Optional – Add product landing screenshots or animations preview GIFs)*
+![TechZone Landing Page] (./assets/images/landing.png)
 
 ---
 

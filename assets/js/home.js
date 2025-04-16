@@ -108,7 +108,7 @@ textParts.forEach((val) => {
             start: "top 50%",
             end: "bottom 50%",
             scrub: 1,
-            markers: true
+            // markers: true
         }
     });
 });
