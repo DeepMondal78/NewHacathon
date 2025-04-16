@@ -1247,6 +1247,102 @@ p {
   color: var(--accent);
 }
 
+.contact {
+  padding: 4rem 2rem;
+}
+.contact .contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.contact .contact-info {
+  flex: 1 1 300px;
+}
+.contact .contact-info h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.contact .contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.contact .contact-info ul {
+  list-style: none;
+}
+.contact .contact-info ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.contact .contact-info ul li .icon {
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 20px;
+}
+.contact .contact-form {
+  flex: 1 1 400px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+.contact .contact-form input,
+.contact .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  background: rgba(31, 30, 30, 0.2);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.contact .contact-form input::-moz-placeholder, .contact .contact-form textarea::-moz-placeholder {
+  color: #ddd;
+}
+.contact .contact-form input::placeholder,
+.contact .contact-form textarea::placeholder {
+  color: #ddd;
+}
+.contact .contact-form .name-fields {
+  display: flex;
+  gap: 1rem;
+}
+.contact .contact-form .name-fields input {
+  flex: 1;
+}
+.contact .contact-form button {
+  background: rgba(9, 30, 90, 0.8);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact .contact-form button:hover {
+  background: rgb(244, 80, 30);
+}
+@media (max-width: 768px) {
+  .contact .contact-container {
+    flex-direction: column;
+  }
+  .contact .contact-info,
+  .contact .contact-form {
+    width: 100%;
+  }
+}
+
 .collection {
   width: 100%;
   padding: 4rem 2rem;
