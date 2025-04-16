@@ -1758,12 +1758,34 @@ main {
   width: 100%;
   overflow-x: hidden;
   background-color: #101010;
+  position: relative;
 }
 main .pre-order {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+}
+main .pre-order .bg-overly,
+main .pre-order .sec-bg-overly {
+  width: 35rem;
+  height: 35rem;
+  background-color: rgb(62, 62, 255);
+  border-radius: 50%;
+  opacity: 50%;
+  filter: blur(50px);
+  position: absolute;
+}
+main .pre-order .bg-overly {
+  top: 47%;
+  right: -23%;
+  opacity: 50%;
+}
+main .pre-order .sec-bg-overly {
+  left: -22%;
+  bottom: 48%;
+  z-index: -1;
+  opacity: 55%;
 }
 main .pre-order__container {
   margin-top: 50px;

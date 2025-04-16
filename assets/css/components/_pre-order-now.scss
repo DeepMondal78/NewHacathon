@@ -11,14 +11,36 @@ main {
     width: 100%;
     overflow-x: hidden;
     background-color: #101010;
+    position: relative;
 
     .pre-order {
-       
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 2rem;
-    
+        .bg-overly,
+        .sec-bg-overly {
+            width: 35rem;
+            height: 35rem;
+            background-color: $p-color;
+            border-radius: 50%;
+            opacity: 50%;
+            filter: blur(50px);
+            position: absolute;
+        }
+
+        .bg-overly {
+            top: 47%;
+            right: -23%;
+            opacity: 50%;
+        }
+        .sec-bg-overly {
+            left: -22%;
+            bottom: 48%;
+            z-index: -1;
+            opacity: 55%;
+        }
+
         &__container {
             margin-top: 50px;
             max-width: 450px;
