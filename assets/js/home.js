@@ -107,7 +107,7 @@ gsap.utils.toArray(".label").forEach((label, i) => {
             start: "top 80%",
             end: "bottom 10%",
             scrub: 2,
-            markers: true
+            // markers: true
         }
     });
 });
