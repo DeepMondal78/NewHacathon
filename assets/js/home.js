@@ -112,58 +112,43 @@ gsap.utils.toArray(".label").forEach((label, i) => {
     });
 });
 
-// Features section animation
-gsap.from("#features .watch-img", {
-    scale: 0.8,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: "#features",
-        scroller: "main",
-        start: "top 80%",
-        end: "top 20%",
-        scrub: 1,
-        // markers: true
-    }
-});
 
 
 
 
 
-gsap.from("#features .title h1", {
-    scrollTrigger: {
-        trigger: "#features",
-        scroller: "main",
-        // markers: true,
-        scrub: 3,
-        start: "top 80%",
-        end: "bottom 50%",
-    },
-    opacity: 0,
-    y: 100,
-    duration: 1,
-    ease: "power2.out"
-});
 
-gsap.from("#features .title p", {
-    scrollTrigger: {
-        trigger: "#features",
-        scroller: "main",
-        // markers: true,
-        scrub: 3,
-        start: "top 75%",
-        end: "bottom 50%",
-    },
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    delay: 0.3,
-    ease: "power2.out"
-});
 
+function contactAnimation() {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".contact",
+            scroller: "main",
+            markers: true,
+            scrub: 3,
+            start: "top 80%",
+            end: "bottom 50%",
+        }
+    });
+
+    tl.from(".contact-form", {
+        opacity: 0,
+        scaleX: 0.7,
+        scaleY: 0.2,
+        y: "80%",
+        borderRadius: "100px",
+        duration: 2,
+        ease: "power4.out"
+    });
+    tl.from(".contact-info", {
+        y: 100,
+        opacity: 0,
+        duration: 2,
+        ease: "power4.out"
+    })
+}
 
 collectionAnimation();
 featureCardsAnimation();
 desContainerAnimation();
+// collectionAnimation()
