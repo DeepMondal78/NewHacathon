@@ -1,0 +1,115 @@
+$blur: blur(25px);
+$bg-glass: rgba(255, 255, 255, 0.1);
+$border-glass: rgba(255, 255, 255, 0.2);
+$text-color: #fff;
+$input-placeholder: rgba(255, 255, 255, 0.6);
+$input-border: rgba(255, 255, 255, 0.3);
+$input-focus-border: #a5b4fc;
+$button-color: #6366f1;
+
+main {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #101010;
+
+    .pre-order {
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    
+        &__container {
+            margin-top: 50px;
+            max-width: 450px;
+            width: 100%;
+            background: $bg-glass;
+            backdrop-filter: $blur;
+            -webkit-backdrop-filter: $blur;
+            border: 1px solid $border-glass;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            color: $text-color;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &__subtitle {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+
+            & label {
+                display: block;
+                margin-bottom: 0.4rem;
+                text-align: left;
+                font-weight: 500;
+            }
+
+            & input {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                border-radius: 0.5rem;
+                background: rgba(255, 255, 255, 0.15);
+                border: 1px solid $input-border;
+                outline: none;
+                color: $text-color;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+
+                &::placeholder {
+                    color: $input-placeholder;
+                }
+
+                &:hover {
+                    border-color: lighten($input-border, 20%);
+                    background: rgba(255, 255, 255, 0.25);
+                }
+
+                &:focus {
+                    border-color: $input-focus-border;
+                    background: rgba(255, 255, 255, 0.3);
+                    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+                }
+            }
+        }
+
+        &__button {
+            padding: 0.9rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: $button-color;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background-color: darken($button-color, 10%);
+            }
+        }
+    }
+
+    // Responsive
+    @media (max-width: 480px) {
+        .pre-order__container {
+            padding: 1.5rem;
+        }
+
+        .pre-order__title {
+            font-size: 1.6rem;
+        }
+    }
+}

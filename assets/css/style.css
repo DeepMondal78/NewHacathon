@@ -1754,6 +1754,100 @@ p {
   top: 450%;
 }
 
+main {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #101010;
+}
+main .pre-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+main .pre-order__container {
+  margin-top: 50px;
+  max-width: 450px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+}
+main .pre-order__title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+main .pre-order__subtitle {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+main .pre-order__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+main .pre-order__form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  text-align: left;
+  font-weight: 500;
+}
+main .pre-order__form input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+main .pre-order__form input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+main .pre-order__form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+main .pre-order__form input:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.25);
+}
+main .pre-order__form input:focus {
+  border-color: #a5b4fc;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+main .pre-order__button {
+  padding: 0.9rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #6366f1;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+main .pre-order__button:hover {
+  background-color: #3438ed;
+}
+@media (max-width: 480px) {
+  main .pre-order__container {
+    padding: 1.5rem;
+  }
+  main .pre-order__title {
+    font-size: 1.6rem;
+  }
+}
+
 .footer {
   background-color: #151515;
   color: #fff;
